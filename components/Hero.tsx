@@ -73,7 +73,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Main Hero Image (Center) */}
-            <div className="w-full h-full object-cover">
+            <div className="w-full  object-cover">
                 <Image
                     src="/hero.png"
                     alt="Sportech"
@@ -121,7 +121,7 @@ export default function Hero() {
                     transition={{ duration: 0.2 }}
                 >
                     <Image
-                        src="/logo_cropped.png"
+                        src="/bsaLogo.png"
                         alt="Cursor"
                         width={60}
                         height={60}
