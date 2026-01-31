@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,24 +26,34 @@ export default function Navbar() {
         <>
             <nav className="fixed font-inter top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-8 py-4">
                 {/* Left Logo */}
-                <div className="w-10 h-10 md:w-12 md:h-12 relative z-50">
+                <motion.div
+                    className="w-10 h-10 md:w-12 md:h-12 relative z-50"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
                     <Image
                         src="/iitd_logo 1.png"
                         alt="IITD Logo"
                         fill
                         className="object-contain"
                     />
-                </div>
+                </motion.div>
 
                 {/* Mobile Center Logo */}
-                <div className="md:hidden w-16 h-16 relative">
+                <motion.div
+                    className="md:hidden w-16 h-16 relative"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
                     <Image
                         src="/sportechLogo.png"
                         alt="Sportech Logo"
                         fill
                         className="object-contain"
                     />
-                </div>
+                </motion.div>
 
                 {/* Hamburger Menu Button - Mobile Only */}
                 <button
@@ -56,7 +67,12 @@ export default function Navbar() {
                 </button>
 
                 {/* Desktop Navigation Container */}
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-4">
+                <motion.div
+                    className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-4"
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+                >
                     {/* Left Nav Pill */}
                     <div className="flex items-center bg-[rgb(24,23,25)] backdrop-blur-md rounded-full px-8 py-4">
                         {navItemsLeft.map((item, index) => (
@@ -102,7 +118,7 @@ export default function Navbar() {
                             </Link>
                         ))}
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Right Spacer - Desktop Only */}
                 <div className="hidden md:block w-12 h-12"></div>

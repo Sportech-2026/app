@@ -62,6 +62,9 @@ export default function Hero() {
             <motion.div
                 className="absolute inset-0 z-10 -translate-y-40"
                 style={{ x: topLayerX, y: topLayerY }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.5, delay: 0.5 }}
             >
                 <Image
                     src="/sportech_blurred1.png"
@@ -73,7 +76,12 @@ export default function Hero() {
             </motion.div>
 
             {/* Main Hero Image (Center) */}
-            <div className="w-full  object-cover">
+            <motion.div
+                className="w-full h-full object-cover"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+            >
                 <Image
                     src="/hero.png"
                     alt="Sportech"
@@ -81,12 +89,15 @@ export default function Hero() {
                     className="object-contain"
                     priority
                 />
-            </div>
+            </motion.div>
 
             {/* Bottom Blurred Layer (Positioned Below) */}
             <motion.div
                 className="absolute bottom-0 right-0 w-full h-full z-10 rounded-full"
                 style={{ x: bottomLayerX, y: bottomLayerY }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.5, delay: 0.7 }}
             >
                 <Image
                     src="/sportech_blurred1.png"
