@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import Marquee from "react-fast-marquee";
 
 export default function MarqueeBanner() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -20,7 +21,7 @@ export default function MarqueeBanner() {
             className="absolute bottom-0 left-0 z-30 w-full m-0 p-0"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.8, delay: 0 }}
         >
             <div
                 ref={containerRef}
@@ -40,60 +41,20 @@ export default function MarqueeBanner() {
                     }}
                 />
 
-                <div className="flex animate-marquee relative z-10 items-center whitespace-nowrap gap-8 pr-8">
-                    {/* First set */}
-                    <div className="flex items-center items-center py-0 gap-8">
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">IGNITE</span>
-                        <Image src="/bsaLogo.png" alt="BSA" width={40} height={40} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">TRIUMPH</span>
-                        <Image src="/sportechLogo.png" alt="Sportech" width={60} height={60} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">UNITE</span>
-                        <Image src="/bsaLogo.png" alt="BSA" width={40} height={40} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">SPORTECH-26</span>
-                        <Image src="/sportechLogo.png" alt="sportech" width={60} height={60} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">MAR 8-11,2026</span>
-                        <Image src="/bsaLogo.png" alt="BSA" width={40} height={40} className="object-contain shrink-0" />
+                <Marquee className="flex items-center py-0 overflow-hidden relative z-10" speed={200} gradient={true} gradientColor="" autoFill>
+                    <div className="flex items-center gap-4 md:gap-8 pr-4 md:pr-8">
+                        <span className="text-lg md:text-2xl tracking-widest text-white font-ethnocentric shrink-0">IGNITE</span>
+                        <Image src="/bsaLogo.png" alt="BSA" width={30} height={30} className="object-contain shrink-0 w-[30px] h-[30px] md:w-[40px] md:h-[40px]" />
+                        <span className="text-lg md:text-2xl tracking-widest text-white font-ethnocentric shrink-0">TRIUMPH</span>
+                        <Image src="/bsaLogo.png" alt="BSA" width={30} height={30} className="object-contain shrink-0 w-[30px] h-[30px] md:w-[40px] md:h-[40px]" />
+                        <span className="text-lg md:text-2xl tracking-widest text-white font-ethnocentric shrink-0">UNITE</span>
+                        <Image src="/bsaLogo.png" alt="BSA" width={30} height={30} className="object-contain shrink-0 w-[30px] h-[30px] md:w-[40px] md:h-[40px]" />
+                        <span className="text-lg md:text-2xl tracking-widest text-white font-ethnocentric shrink-0">SPORTECH-26</span>
+                        <Image src="/bsaLogo.png" alt="BSA" width={30} height={30} className="object-contain shrink-0 w-[30px] h-[30px] md:w-[40px] md:h-[40px]" />
+                        <span className="text-lg md:text-2xl tracking-widest text-white font-ethnocentric shrink-0">MAR 8-11,2026</span>
+                        <Image src="/bsaLogo.png" alt="BSA" width={30} height={30} className="object-contain shrink-0 w-[30px] h-[30px] md:w-[40px] md:h-[40px]" />
                     </div>
-                    {/* Duplicate 1 */}
-                    <div className="flex items-center items-center gap-8 py-0">
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">IGNITE</span>
-                        <Image src="/bsaLogo.png" alt="BSA" width={40} height={40} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">TRIUMPH</span>
-                        <Image src="/sportechLogo.png" alt="Sportech" width={60} height={60} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">UNITE</span>
-                        <Image src="/bsaLogo.png" alt="BSA" width={40} height={40} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">SPORTECH-26</span>
-                        <Image src="/sportechLogo.png" alt="sportech" width={60} height={60} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">MAR 8-11,2026</span>
-                        <Image src="/bsaLogo.png" alt="BSA" width={40} height={40} className="object-contain shrink-0" />
-                    </div>
-                    {/* Duplicate 2 */}
-                    <div className="flex items-center items-center gap-8 py-0">
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">IGNITE</span>
-                        <Image src="/bsaLogo.png" alt="BSA" width={40} height={40} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">TRIUMPH</span>
-                        <Image src="/sportechLogo.png" alt="Sportech" width={60} height={60} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">UNITE</span>
-                        <Image src="/bsaLogo.png" alt="BSA" width={40} height={40} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">SPORTECH-26</span>
-                        <Image src="/sportechLogo.png" alt="sportech" width={60} height={60} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">MAR 8-11,2026</span>
-                        <Image src="/bsaLogo.png" alt="BSA" width={40} height={40} className="object-contain shrink-0" />
-                    </div>
-                    {/* Duplicate 3 */}
-                    <div className="flex items-center items-center gap-8 py-0">
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">IGNITE</span>
-                        <Image src="/bsaLogo.png" alt="BSA" width={40} height={40} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">TRIUMPH</span>
-                        <Image src="/sportechLogo.png" alt="Sportech" width={60} height={60} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">UNITE</span>
-                        <Image src="/bsaLogo.png" alt="BSA" width={40} height={40} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">SPORTECH-26</span>
-                        <Image src="/sportechLogo.png" alt="sportech" width={60} height={60} className="object-contain shrink-0" />
-                        <span className="text-2xl tracking-widest text-white font-ethnocentric shrink-0">MAR 8-11,2026</span>
-                        <Image src="/bsaLogo.png" alt="BSA" width={40} height={40} className="object-contain shrink-0" />
-                    </div>
-                </div>
+                </Marquee>
             </div>
         </motion.div>
     );

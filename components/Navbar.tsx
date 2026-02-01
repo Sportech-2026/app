@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -125,23 +125,40 @@ export default function Navbar() {
             </nav>
 
             {/* Mobile Menu Overlay */}
-            <div
-                className={`md:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-lg transition-all duration-300 ${isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-                    }`}
-            >
-                <div className="flex flex-col items-center justify-center h-full gap-8">
-                    {allNavItems.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            className="text-2xl font-medium text-white/80 hover:text-white transition-colors tracking-widest"
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <>
+                        {/* Backdrop */}
+                        <motion.div
+                            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
                             onClick={() => setIsMenuOpen(false)}
+                        />
+
+                        {/* Side Drawer */}
+                        <motion.div
+                            className="fixed top-0 right-0 z-40 h-full w-64 bg-black/95 border-l border-white/10 md:hidden pt-24 px-6 flex flex-col gap-6"
+                            initial={{ x: "100%" }}
+                            animate={{ x: 0 }}
+                            exit={{ x: "100%" }}
+                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
                         >
-                            {item.name}
-                        </Link>
-                    ))}
-                </div>
-            </div>
+                            {allNavItems.map((item) => (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className="text-lg font-medium  font-ethnocentric text-white/80 hover:text-white transition-colors tracking-widest border-b border-white/10 pb-4"
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {item.name}
+                                </Link>
+                            ))}
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
         </>
     );
 }
