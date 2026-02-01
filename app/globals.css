@@ -19,6 +19,10 @@
   }
 }
 
+.font-ethnocentric {
+  font-family: var(--font-ethno);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -30,15 +34,22 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
 
 .animate-marquee {
-  animation: marquee 15s linear infinite;
+  animation: marquee 5s linear infinite;
+  will-change: transform;
 }
 
 .animate-marquee-slow {
   animation: marquee 25s linear infinite;
+}
+
+.group:hover .animate-marquee,
+.group:hover .animate-marquee-slow {
+  animation-play-state: paused;
 }
