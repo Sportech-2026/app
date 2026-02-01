@@ -1,0 +1,6 @@
+1. change font of navbar
+2. add alternate bsa and sportech logo in marquee banner
+3. add sportech 26 and dates to marquee banner
+4. crop the pngs in marquee
+5. add hamburger aniination from left
+6. add hover effect on hamburger options

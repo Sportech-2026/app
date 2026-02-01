@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
+import MarqueeBanner from "./MarqueeBanner";
 
 export default function Hero() {
     const containerRef = useRef<HTMLElement>(null);
@@ -140,6 +141,9 @@ export default function Hero() {
                     />
                 </motion.div>
             )}
+
+            {/* Bottom Marquee Banner */}
+            <MarqueeBanner />
         </section>
     );
 }
