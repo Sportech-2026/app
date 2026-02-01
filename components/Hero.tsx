@@ -61,7 +61,7 @@ export default function Hero() {
         >
             {/* Top Blurred Layer (Positioned Above) */}
             <motion.div
-                className="absolute inset-0 z-10 -translate-y-40"
+                className="hidden lg:block absolute inset-0 z-10 -translate-y-40"
                 style={{ x: topLayerX, y: topLayerY }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -94,7 +94,7 @@ export default function Hero() {
 
             {/* Bottom Blurred Layer (Positioned Below) */}
             <motion.div
-                className="absolute bottom-0 right-0 w-full h-full z-10 rounded-full"
+                className="hidden md:block absolute bottom-0 right-0 w-full h-full z-10 rounded-full"
                 style={{ x: bottomLayerX, y: bottomLayerY }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
