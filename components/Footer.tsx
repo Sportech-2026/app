@@ -15,7 +15,7 @@ const Footer = () => {
                     priority
                 />
                 {/* Moderate Dark Overlay for contrast */}
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/70" />
             </div>
 
             <div className="container mx-auto px-6 lg:px-20 relative z-10 flex flex-col md:flex-row items-center justify-center">
