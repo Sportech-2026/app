@@ -1,6 +1,6 @@
 'use client';
 import Image from "next/image";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const teamMembers = [
     {
@@ -126,39 +126,37 @@ export default function TeamPage() {
                         <div className="flex flex-wrap justify-center gap-6 w-full">
                             {teamMembers.slice(0, 3).map((member, index) => (
                                 <div key={index} className="w-full max-w-sm flex justify-center">
-                                    <CardContainer containerClassName="py-4">
-                                        <CardBody className="relative group/card w-[85vw] md:w-80 h-96 rounded-xl p-[1px] bg-black/[0.1] dark:bg-white/[0.2] hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 transition-all duration-300">
-                                            <div className="w-full h-full bg-gray-50 dark:bg-black rounded-xl p-6 relative flex flex-col items-center">
-                                                <CardItem
-                                                    translateZ="50"
-                                                    className="text-lg font-bold text-neutral-600 dark:text-white w-full text-center text-wrap"
-                                                >
-                                                    {member.name}
-                                                </CardItem>
-                                                <CardItem
-                                                    as="p"
-                                                    translateZ="60"
-                                                    className="text-neutral-500 text-xs max-w-sm mt-2 dark:text-neutral-300 w-full text-center text-wrap"
-                                                >
-                                                    {member.role}
-                                                </CardItem>
-                                                <CardItem
-                                                    translateZ="100"
-                                                    rotateX={10}
-                                                    rotateZ={-5}
-                                                    className="w-full mt-auto"
-                                                >
+                                    <div className="relative h-96 w-[85vw] md:w-80 rounded-2xl border border-neutral-800">
+                                        <GlowingEffect
+                                            spread={80}
+                                            glow={true}
+                                            disabled={false}
+                                            proximity={64}
+                                            inactiveZone={0.01}
+                                            borderWidth={4}
+                                        />
+                                        <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl bg-black p-6">
+                                            <div className="relative flex flex-1 flex-col justify-between gap-3">
+                                                <div className="w-full text-center">
+                                                    <div className="text-lg font-bold text-white text-wrap">
+                                                        {member.name}
+                                                    </div>
+                                                    <p className="text-neutral-300 text-xs mt-2 text-wrap">
+                                                        {member.role}
+                                                    </p>
+                                                </div>
+                                                <div className="w-full mt-auto">
                                                     <Image
                                                         src={member.image}
                                                         height="1000"
                                                         width="1000"
-                                                        className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                                        className="h-60 w-full object-cover rounded-xl"
                                                         alt={member.name}
                                                     />
-                                                </CardItem>
+                                                </div>
                                             </div>
-                                        </CardBody>
-                                    </CardContainer>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -172,39 +170,37 @@ export default function TeamPage() {
                         <div className="flex flex-wrap justify-center gap-6 w-full">
                             {teamMembers.slice(3, 5).map((member, index) => (
                                 <div key={index} className="w-full max-w-sm flex justify-center">
-                                    <CardContainer containerClassName="py-4">
-                                        <CardBody className="relative group/card w-[85vw] md:w-80 h-96 rounded-xl p-[1px] bg-black/[0.1] dark:bg-white/[0.2] hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 transition-all duration-300">
-                                            <div className="w-full h-full bg-gray-50 dark:bg-black rounded-xl p-6 relative flex flex-col items-center">
-                                                <CardItem
-                                                    translateZ="50"
-                                                    className="text-lg font-bold text-neutral-600 dark:text-white w-full text-center text-wrap"
-                                                >
-                                                    {member.name}
-                                                </CardItem>
-                                                <CardItem
-                                                    as="p"
-                                                    translateZ="60"
-                                                    className="text-neutral-500 text-xs max-w-sm mt-2 dark:text-neutral-300 w-full text-center text-wrap"
-                                                >
-                                                    {member.role}
-                                                </CardItem>
-                                                <CardItem
-                                                    translateZ="100"
-                                                    rotateX={10}
-                                                    rotateZ={-5}
-                                                    className="w-full mt-auto"
-                                                >
+                                    <div className="relative h-96 w-[85vw] md:w-80 rounded-2xl border border-neutral-800">
+                                        <GlowingEffect
+                                            spread={80}
+                                            glow={true}
+                                            disabled={false}
+                                            proximity={64}
+                                            inactiveZone={0.01}
+                                            borderWidth={4}
+                                        />
+                                        <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl bg-black p-6">
+                                            <div className="relative flex flex-1 flex-col justify-between gap-3">
+                                                <div className="w-full text-center">
+                                                    <div className="text-lg font-bold text-white text-wrap">
+                                                        {member.name}
+                                                    </div>
+                                                    <p className="text-neutral-300 text-xs mt-2 text-wrap">
+                                                        {member.role}
+                                                    </p>
+                                                </div>
+                                                <div className="w-full mt-auto">
                                                     <Image
                                                         src={member.image}
                                                         height="1000"
                                                         width="1000"
-                                                        className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                                        className="h-60 w-full object-cover rounded-xl"
                                                         alt={member.name}
                                                     />
-                                                </CardItem>
+                                                </div>
                                             </div>
-                                        </CardBody>
-                                    </CardContainer>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -218,39 +214,37 @@ export default function TeamPage() {
                         <div className="flex flex-wrap justify-center gap-6 w-full">
                             {teamMembers.slice(5).map((member, index) => (
                                 <div key={index} className="w-full max-w-sm flex justify-center">
-                                    <CardContainer containerClassName="py-4">
-                                        <CardBody className="relative group/card w-[85vw] md:w-80 h-96 rounded-xl p-[1px] bg-black/[0.1] dark:bg-white/[0.2] hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 transition-all duration-300">
-                                            <div className="w-full h-full bg-gray-50 dark:bg-black rounded-xl p-6 relative flex flex-col items-center">
-                                                <CardItem
-                                                    translateZ="50"
-                                                    className="text-lg font-bold text-neutral-600 dark:text-white w-full text-center text-wrap"
-                                                >
-                                                    {member.name}
-                                                </CardItem>
-                                                <CardItem
-                                                    as="p"
-                                                    translateZ="60"
-                                                    className="text-neutral-500 text-xs max-w-sm mt-2 dark:text-neutral-300 w-full text-center text-wrap"
-                                                >
-                                                    {member.role}
-                                                </CardItem>
-                                                <CardItem
-                                                    translateZ="100"
-                                                    rotateX={10}
-                                                    rotateZ={-5}
-                                                    className="w-full mt-auto"
-                                                >
+                                    <div className="relative h-96 w-[85vw] md:w-80 rounded-2xl border border-neutral-800">
+                                        <GlowingEffect
+                                            spread={80}
+                                            glow={true}
+                                            disabled={false}
+                                            proximity={64}
+                                            inactiveZone={0.01}
+                                            borderWidth={4}
+                                        />
+                                        <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl bg-black p-6">
+                                            <div className="relative flex flex-1 flex-col justify-between gap-3">
+                                                <div className="w-full text-center">
+                                                    <div className="text-lg font-bold text-white text-wrap">
+                                                        {member.name}
+                                                    </div>
+                                                    <p className="text-neutral-300 text-xs mt-2 text-wrap">
+                                                        {member.role}
+                                                    </p>
+                                                </div>
+                                                <div className="w-full mt-auto">
                                                     <Image
                                                         src={member.image}
                                                         height="1000"
                                                         width="1000"
-                                                        className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                                        className="h-60 w-full object-cover rounded-xl"
                                                         alt={member.name}
                                                     />
-                                                </CardItem>
+                                                </div>
                                             </div>
-                                        </CardBody>
-                                    </CardContainer>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
