@@ -11,7 +11,7 @@ export default function Navbar() {
     const navItemsLeft = [
         { name: "HOME", href: "/" },
         { name: "GALLERY", href: "/gallery" },
-        { name: "EVENTS", href: "/formal-sports" },
+        { name: "EVENTS", href: "/events" },
     ];
 
     const navItemsRight = [
@@ -48,7 +48,7 @@ export default function Navbar() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
                     <Image
-                        src="/sportechLogo.png"
+                        src="/sportech_logo.png"
                         alt="Sportech Logo"
                         fill
                         className="object-contain"
@@ -92,9 +92,9 @@ export default function Navbar() {
                     </div>
 
                     {/* Center Logo */}
-                    <div className="w-24 h-24 relative mx-2 hover:rotate-360 transition-all duration-300">
+                    <div className="w-24 h-24 relative mx-2 ">
                         <Image
-                            src="/sportechLogo.png"
+                            src="/sportech_logo.png"
                             alt="Sportech Logo"
                             fill
                             className="object-contain"

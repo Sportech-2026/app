@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from 'next/font/local'
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const ethnocentric = localFont({
   src: [
@@ -40,6 +41,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${ethnocentric.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
