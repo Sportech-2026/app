@@ -92,7 +92,7 @@ export default function Navbar() {
                     </div>
 
                     {/* Center Logo */}
-                    <div className="w-24 h-24 relative mx-2 ">
+                    <div className="w-16 h-16 relative mx-2 -translate-y-1">
                         <Image
                             src="/sportech_logo.png"
                             alt="Sportech Logo"
