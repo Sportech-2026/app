@@ -1,12 +1,77 @@
 "use client";
 
 import Image from "next/image";
+import { CardSpotlight } from "@/components/ui/card-spotlight";
+
+
+const sports = [
+    {
+        title: "Cricket",
+        image: "/sports pngs/cricket_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Football",
+        image: "/sports pngs/football_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Basketball",
+        image: "/sports pngs/basketball_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Badminton",
+        image: "/sports pngs/badminton_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Tennis",
+        image: "/sports pngs/Tennis_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Volleyball",
+        image: "/sports pngs/volleyball_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Hockey",
+        image: "/sports pngs/hockey_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Squash",
+        image: "/sports pngs/squash_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Table Tennis",
+        image: "/sports pngs/tt_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Athletics",
+        image: "/sports pngs/athletics_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Chess",
+        image: "/sports pngs/chess_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Weightlifting",
+        image: "/sports pngs/weightlifiing_icon.png",
+        color: "#3B82F6", // Blue
+    },
+];
 
 export default function EventsPage() {
     return (
-        <section className="relative w-full h-screen overflow-hidden text-white">
+        <section className="relative w-full min-h-screen overflow-y-auto text-white py-20">
             {/* Background Image */}
-            <div className="absolute inset-0 -z-10">
+            <div className="fixed inset-0 -z-10">
                 <Image
                     src="/bg_events.png"
                     alt="Events Background"
@@ -16,15 +81,48 @@ export default function EventsPage() {
                 />
             </div>
 
-            <div className="relative z-10 flex flex-col items-center justify-center h-full">
-                <h2 className="text-4xl font-bold tracking-wider uppercase md:text-6xl">
+            <div className="relative z-10 container mx-auto px-4 flex flex-col items-center">
+                <h2 className="text-4xl font-bold tracking-wider uppercase md:text-6xl mb-12 text-center font-ethnocentric">
                     Events
                 </h2>
-                {/* Creating a placeholder for events content */}
-                <p className="mt-4 text-lg text-gray-300">
-                    Stay tuned for upcoming events!
-                </p>
+
+                <div className="flex flex-wrap justify-center gap-12 w-full max-w-7xl">
+                    {sports.map((sport, index) => (
+                        <CardSpotlight
+                            key={index}
+                            className="h-[300px] w-[80%] max-w-[320px] sm:w-[45%] md:w-[30%] lg:w-[18%] xl:w-[16%] flex flex-col items-center justify-between p-4 border border-white/10 rounded-xl"
+                            color={sport.color}
+                            backgroundImage="/events_card_bg.png"
+                        >
+                            {/* PNG Container - Centered */}
+                            <div className="flex-1 flex items-center justify-center relative z-20 w-full group-hover/spotlight:scale-110 transition-transform duration-500">
+                                {/* Decorative glow behind the PNG */}
+                                <div
+                                    className="absolute inset-0 rounded-full blur-3xl opacity-0 group-hover/spotlight:opacity-60 transition-opacity"
+                                    style={{ backgroundColor: `${sport.color}40` }} // 25% opacity
+                                />
+
+                                <Image
+                                    src={sport.image}
+                                    alt={`${sport.title} Icon`}
+                                    width={160}
+                                    height={160}
+                                    className="relative z-30 object-contain drop-shadow-lg"
+                                />
+                            </div>
+
+                            {/* Title at the bottom */}
+                            <h3
+                                className="text-sm font-bold tracking-widest uppercase relative z-20  text-center font-ethnocentric w-full break-words px-2 leading-tight"
+                                style={{ color: sport.color }}
+                            >
+                                {sport.title}
+                            </h3>
+                        </CardSpotlight>
+                    ))}
+                </div>
             </div>
+
         </section>
     );
 }
