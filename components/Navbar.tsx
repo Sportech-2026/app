@@ -15,7 +15,7 @@ export default function Navbar() {
     ];
 
     const navItemsRight = [
-        { name: "ABOUT", href: "/informal-sports" },
+        { name: "ABOUT", href: "/about" },
         { name: "TEAM", href: "/team" },
         { name: "CONTACT", href: "/contact" },
     ];
