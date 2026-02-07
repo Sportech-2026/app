@@ -11,7 +11,7 @@ export default function Navbar() {
     const navItemsLeft = [
         { name: "HOME", href: "/" },
         { name: "GALLERY", href: "/gallery" },
-        { name: "EVENTS", href: "/formal-sports" },
+        { name: "EVENTS", href: "/events" },
     ];
 
     const navItemsRight = [
