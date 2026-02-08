@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 };
 
 import Footer from "@/components/Footer";
+import SportsLoader from "@/components/Loader";
 
 export default function RootLayout({
   children,
@@ -43,6 +44,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${ethnocentric.variable} antialiased min-h-screen flex flex-col`}
       >
+        <SportsLoader />
         <Navbar />
         {children}
         <Footer />
