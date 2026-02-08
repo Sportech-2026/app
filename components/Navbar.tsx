@@ -32,12 +32,14 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <Image
-                        src="/iitd_logo 1.png"
-                        alt="IITD Logo"
-                        fill
-                        className="object-contain"
-                    />
+                    <Link href="/" className="cursor-pointer block w-full h-full relative">
+                        <Image
+                            src="/iitd_logo 1.png"
+                            alt="IITD Logo"
+                            fill
+                            className="object-contain"
+                        />
+                    </Link>
                 </motion.div>
 
                 {/* Mobile Center Logo */}
@@ -47,12 +49,14 @@ export default function Navbar() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    <Image
-                        src="/sportech_logo.png"
-                        alt="Sportech Logo"
-                        fill
-                        className="object-contain"
-                    />
+                    <Link href="/" className="cursor-pointer block w-full h-full relative">
+                        <Image
+                            src="/sportech_logo.png"
+                            alt="Sportech Logo"
+                            fill
+                            className="object-contain"
+                        />
+                    </Link>
                 </motion.div>
 
                 {/* Hamburger Menu Button - Mobile Only */}
@@ -74,7 +78,7 @@ export default function Navbar() {
                     transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                 >
                     {/* Left Nav Pill */}
-                    <div className="flex items-center bg-[rgb(24,23,25)] backdrop-blur-md rounded-full px-8 py-4">
+                    <div className="flex items-center bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-8 py-4">
                         {navItemsLeft.map((item, index) => (
                             <Link
                                 key={item.name}
@@ -93,16 +97,18 @@ export default function Navbar() {
 
                     {/* Center Logo */}
                     <div className="w-16 h-16 relative mx-2 -translate-y-1">
-                        <Image
-                            src="/sportech_logo.png"
-                            alt="Sportech Logo"
-                            fill
-                            className="object-contain"
-                        />
+                        <Link href="/" className="cursor-pointer block w-full h-full relative">
+                            <Image
+                                src="/sportech_logo.png"
+                                alt="Sportech Logo"
+                                fill
+                                className="object-contain"
+                            />
+                        </Link>
                     </div>
 
                     {/* Right Nav Pill */}
-                    <div className="flex items-center bg-[rgb(24,23,25)] backdrop-blur-md rounded-full px-8 py-4">
+                    <div className="flex items-center bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-8 py-4">
                         {navItemsRight.map((item, index) => (
                             <Link
                                 key={item.name}
