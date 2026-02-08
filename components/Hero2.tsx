@@ -3,20 +3,29 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-background";
+
 export default function Hero2() {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden bg-black">
+      {/* Dynamic Background */}
+      <div className="absolute inset-0 z-20">
+        <ShootingStars minDelay={1000} maxDelay={2000} starColor="#9E00FF" trailColor="#2EB9DF"  />
+        <StarsBackground starDensity={0.003} allStarsTwinkle={true} twinkleProbability={0.9} />
+      </div>
+
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={{ opacity: 0.6 }} // Reduced opacity to let stars show through
         transition={{ duration: 1.5 }}
-        className="absolute inset-0 -z-20"
+        className="absolute inset-0 z-0" // Changed z-index
       >
         <Image
           src="/hero_bg.png"
           alt="Hero Background"
           fill
-          className="object-cover"
+          className="object-cover mix-blend-overlay" // Added mix-blend-mode
           priority
         />
       </motion.div>
@@ -39,8 +48,8 @@ export default function Hero2() {
         </motion.div>
       </div>
 
-      <div className="hidden md:block absolute bottom-0 right-0 w-[1200px] h-[700px] pointer-events-none origin-bottom-right transform transition-transform duration-300 md:scale-[0.7] lg:scale-[0.85] xl:scale-100">
-        <motion.div
+      <div className="hidden md:block absolute bottom-0 right-0 w-[1200px] h-[700px] pointer-events-none origin-bottom-right transform transition-transform duration-300 md:scale-[0.7] lg:scale-[0.85] xl:scale-100 z-10">
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
@@ -59,7 +68,7 @@ export default function Hero2() {
               priority
             />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
