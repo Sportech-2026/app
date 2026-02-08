@@ -105,9 +105,9 @@ export default function EventsPage() {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-4xl font-bold tracking-wider uppercase md:text-6xl mb-12 text-center font-ethnocentric"
+                    className="text-4xl font-bold tracking-wider uppercase md:text-6xl mb-12 mt-6 text-center font-ethnocentric"
                 >
-                    Events
+                    Formals
                 </motion.h2>
 
                 <motion.div
