@@ -156,7 +156,7 @@ export default function TeamPage() {
                         <div className="flex flex-wrap justify-center gap-6 w-full">
                             {teamMembers.slice(0, 3).map((member, index) => (
                                 <div key={index} className="w-full max-w-sm flex justify-center">
-                                    <div className="relative h-96 w-[85vw] md:w-80 rounded-2xl border border-neutral-800">
+                                    <div className="relative  w-[85vw] md:w-80 rounded-2xl border border-neutral-800">
                                         <GlowingEffect
                                             spread={80}
                                             glow={true}
@@ -165,17 +165,17 @@ export default function TeamPage() {
                                             inactiveZone={0.01}
                                             borderWidth={4}
                                         />
-                                        <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl bg-black p-6">
-                                            <div className="relative flex flex-1 flex-col justify-between gap-3">
-                                                <div className="w-full text-center">
+                                        <div className="relative flex h-full flex-col justify-end overflow-hidden rounded-xl bg-black p-6">
+                                            <div className="relative flex flex-col gap-2 items-center">
+                                                <div className="w-full text-center mb-2">
                                                     <div className="text-lg font-bold text-white text-wrap">
                                                         {member.name}
                                                     </div>
-                                                    <p className="text-neutral-300 text-xs mt-2 text-wrap">
+                                                    <p className="text-neutral-300 text-xs mt-1 text-wrap">
                                                         {member.role}
                                                     </p>
                                                 </div>
-                                                <div className="w-full mt-auto">
+                                                <div className="w-full">
                                                     <Image
                                                         src={member.image}
                                                         height="1000"
@@ -200,7 +200,7 @@ export default function TeamPage() {
                         <div className="flex flex-wrap justify-center gap-6 w-full">
                             {teamMembers.slice(3, 5).map((member, index) => (
                                 <div key={index} className="w-full max-w-sm flex justify-center">
-                                    <div className="relative h-96 w-[85vw] md:w-80 rounded-2xl border border-neutral-800">
+                                    <div className="relative  w-[85vw] md:w-80 rounded-2xl border border-neutral-800">
                                         <GlowingEffect
                                             spread={80}
                                             glow={true}
@@ -209,17 +209,17 @@ export default function TeamPage() {
                                             inactiveZone={0.01}
                                             borderWidth={4}
                                         />
-                                        <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl bg-black p-6">
-                                            <div className="relative flex flex-1 flex-col justify-between gap-3">
-                                                <div className="w-full text-center">
+                                        <div className="relative flex h-full flex-col justify-end overflow-hidden rounded-xl bg-black p-6">
+                                            <div className="relative flex flex-col gap-2 items-center">
+                                                <div className="w-full text-center mb-2">
                                                     <div className="text-lg font-bold text-white text-wrap">
                                                         {member.name}
                                                     </div>
-                                                    <p className="text-neutral-300 text-xs mt-2 text-wrap">
+                                                    <p className="text-neutral-300 text-xs mt-1 text-wrap">
                                                         {member.role}
                                                     </p>
                                                 </div>
-                                                <div className="w-full mt-auto">
+                                                <div className="w-full">
                                                     <Image
                                                         src={member.image}
                                                         height="1000"
@@ -241,34 +241,34 @@ export default function TeamPage() {
                         <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase text-white/80 font-ethno">
                             Core Team Members
                         </h2>
-                        <div className="flex flex-wrap justify-center gap-6 w-full">
+                        <div className="flex flex-wrap justify-evenly gap-4 w-full">
                             {teamMembers.slice(5).map((member, index) => (
-                                <div key={index} className="w-full max-w-sm flex justify-center">
-                                    <div className="relative h-96 w-[85vw] md:w-80 rounded-2xl border border-neutral-800">
+                                <div key={index} className="flex justify-center">
+                                    <div className="relative  w-[45vw] md:w-60 rounded-2xl border border-neutral-800">
                                         <GlowingEffect
-                                            spread={80}
+                                            spread={60}
                                             glow={true}
                                             disabled={false}
                                             proximity={64}
                                             inactiveZone={0.01}
-                                            borderWidth={4}
+                                            borderWidth={3}
                                         />
-                                        <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl bg-black p-6">
-                                            <div className="relative flex flex-1 flex-col justify-between gap-3">
-                                                <div className="w-full text-center">
-                                                    <div className="text-lg font-bold text-white text-wrap">
+                                        <div className="relative flex flex-col justify-end overflow-hidden rounded-xl bg-black p-4">
+                                            <div className="relative flex flex-col gap-2 items-center">
+                                                <div className="w-full text-center mb-1">
+                                                    <div className="text-sm font-bold text-white text-wrap leading-tight">
                                                         {member.name}
                                                     </div>
-                                                    <p className="text-neutral-300 text-xs mt-2 text-wrap">
+                                                    <p className="text-neutral-300 text-[10px] mt-1 text-wrap">
                                                         {member.role}
                                                     </p>
                                                 </div>
-                                                <div className="w-full mt-auto">
+                                                <div className="w-full">
                                                     <Image
                                                         src={member.image}
-                                                        height="1000"
-                                                        width="1000"
-                                                        className="h-60 w-full object-cover rounded-xl"
+                                                        height="600"
+                                                        width="500"
+                                                        className="h-48 w-full object-cover rounded-lg"
                                                         alt={member.name}
                                                     />
                                                 </div>
