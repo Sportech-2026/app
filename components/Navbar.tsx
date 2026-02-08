@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     const navItemsLeft = [
         { name: "HOME", href: "/" },
@@ -17,7 +19,7 @@ export default function Navbar() {
     const navItemsRight = [
         { name: "ABOUT", href: "/about" },
         { name: "TEAM", href: "/team" },
-        { name: "CONTACT", href: "/contact" },
+        { name: "SPONSORS", href: "/sponsors" },
     ];
 
     const allNavItems = [...navItemsLeft, ...navItemsRight];
@@ -79,20 +81,29 @@ export default function Navbar() {
                 >
                     {/* Left Nav Pill */}
                     <div className="flex items-center bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-8 py-4">
-                        {navItemsLeft.map((item, index) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className={`group relative overflow-hidden inline-block text-sm font-medium tracking-wide ${index < navItemsLeft.length - 1 ? "mr-6" : ""}`}
-                            >
-                                <span className="block text-white/80 transition-transform duration-300 ease-out group-hover:-translate-y-full">
-                                    {item.name}
-                                </span>
-                                <span className="absolute left-0 top-0 block text-white translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0">
-                                    {item.name}
-                                </span>
-                            </Link>
-                        ))}
+                        {navItemsLeft.map((item, index) => {
+                            const isActive = pathname === item.href;
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className={`group relative overflow-hidden inline-block text-sm font-medium tracking-wide ${index < navItemsLeft.length - 1 ? "mr-6" : ""}`}
+                                >
+                                    <span className={`block transition-transform duration-300 ease-out group-hover:-translate-y-full ${isActive ? "text-cyan-400" : "text-white/80"}`}>
+                                        {item.name}
+                                    </span>
+                                    <span className={`absolute left-0 top-0 block translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0 ${isActive ? "text-cyan-400" : "text-white"}`}>
+                                        {item.name}
+                                    </span>
+                                    {isActive && (
+                                        <>
+                                            <span className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent shadow-[0_0_10px_#06b6d4]" />
+                                            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent shadow-[0_0_10px_#06b6d4]" />
+                                        </>
+                                    )}
+                                </Link>
+                            )
+                        })}
                     </div>
 
                     {/* Center Logo */}
@@ -109,20 +120,29 @@ export default function Navbar() {
 
                     {/* Right Nav Pill */}
                     <div className="flex items-center bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-8 py-4">
-                        {navItemsRight.map((item, index) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className={`group relative overflow-hidden inline-block text-sm font-medium tracking-wide ${index < navItemsRight.length - 1 ? "mr-6" : ""}`}
-                            >
-                                <span className="block text-white/80 transition-transform duration-300 ease-out group-hover:-translate-y-full">
-                                    {item.name}
-                                </span>
-                                <span className="absolute left-0 top-0 block text-white translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0">
-                                    {item.name}
-                                </span>
-                            </Link>
-                        ))}
+                        {navItemsRight.map((item, index) => {
+                            const isActive = pathname === item.href;
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className={`group relative overflow-hidden inline-block text-sm font-medium tracking-wide ${index < navItemsRight.length - 1 ? "mr-6" : ""}`}
+                                >
+                                    <span className={`block transition-transform duration-300 ease-out group-hover:-translate-y-full ${isActive ? "text-cyan-400" : "text-white/80"}`}>
+                                        {item.name}
+                                    </span>
+                                    <span className={`absolute left-0 top-0 block translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0 ${isActive ? "text-cyan-400" : "text-white"}`}>
+                                        {item.name}
+                                    </span>
+                                    {isActive && (
+                                        <>
+                                            <span className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent shadow-[0_0_10px_#06b6d4]" />
+                                            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent shadow-[0_0_10px_#06b6d4]" />
+                                        </>
+                                    )}
+                                </Link>
+                            )
+                        })}
                     </div>
                 </motion.div>
 

@@ -1,6 +1,26 @@
 'use client';
 import Image from "next/image";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { motion, Variants } from "framer-motion";
+
+const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const sectionVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.6, ease: "easeOut" }
+    },
+};
 
 const teamMembers = [
     {
@@ -112,14 +132,24 @@ export default function TeamPage() {
 
             {/* Content Container */}
             <div className="relative z-20 container mx-auto px-4 py-24 text-white text-center">
-                <h1 className="text-3xl md:text-5xl font-bold tracking-wide uppercase mb-8 md:mb-16 drop-shadow-lg font-ethno">
+                <motion.h1
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="text-3xl md:text-5xl font-bold tracking-wide uppercase mb-8 md:mb-16 drop-shadow-lg font-ethno"
+                >
                     MEET OUR TEAM
-                </h1>
+                </motion.h1>
 
-                <div className="flex flex-col items-center gap-12 md:gap-24 w-full md:max-w-[calc(100vw-200px)] mx-auto relative z-20">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="flex flex-col items-center gap-12 md:gap-24 w-full md:max-w-[calc(100vw-200px)] mx-auto relative z-20"
+                >
 
                     {/* Section 1: Secretaries */}
-                    <div className="w-full flex flex-col items-center gap-6">
+                    <motion.div variants={sectionVariants} className="w-full flex flex-col items-center gap-6">
                         <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase text-white/80 font-ethno">
                             Secretaries
                         </h2>
@@ -160,10 +190,10 @@ export default function TeamPage() {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Section 2: Coordinators */}
-                    <div className="w-full flex flex-col items-center gap-6">
+                    <motion.div variants={sectionVariants} className="w-full flex flex-col items-center gap-6">
                         <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase text-white/80 font-ethno">
                             Coordinators
                         </h2>
@@ -204,10 +234,10 @@ export default function TeamPage() {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Section 3: Core Team Members */}
-                    <div className="w-full flex flex-col items-center gap-2">
+                    <motion.div variants={sectionVariants} className="w-full flex flex-col items-center gap-2">
                         <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase text-white/80 font-ethno">
                             Core Team Members
                         </h2>
@@ -248,8 +278,8 @@ export default function TeamPage() {
                                 </div>
                             ))}
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );

@@ -2,7 +2,26 @@
 
 import Image from "next/image";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
+import { motion, Variants } from "framer-motion";
 
+const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+        },
+    },
+};
+
+const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5, ease: "easeOut" }
+    },
+};
 
 const sports = [
     {
@@ -82,45 +101,60 @@ export default function EventsPage() {
             </div>
 
             <div className="relative z-10 container mx-auto px-4 flex flex-col items-center">
-                <h2 className="text-4xl font-bold tracking-wider uppercase md:text-6xl mb-12 text-center font-ethnocentric">
+                <motion.h2
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="text-4xl font-bold tracking-wider uppercase md:text-6xl mb-12 text-center font-ethnocentric"
+                >
                     Events
-                </h2>
+                </motion.h2>
 
-                <div className="flex flex-wrap justify-center gap-12 w-full max-w-7xl">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="flex flex-wrap justify-center gap-12 w-full max-w-7xl"
+                >
                     {sports.map((sport, index) => (
-                        <CardSpotlight
+                        <motion.div
                             key={index}
-                            className="h-[300px] w-[80%] max-w-[320px] sm:w-[45%] md:w-[30%] lg:w-[18%] xl:w-[16%] flex flex-col items-center justify-between p-4 border border-white/10 rounded-xl"
-                            color={sport.color}
-                            backgroundImage="/events_card_bg.png"
+                            variants={cardVariants}
+                            className="h-[300px] w-[80%] max-w-[320px] sm:w-[45%] md:w-[30%] lg:w-[18%] xl:w-[16%]"
                         >
-                            {/* PNG Container - Centered */}
-                            <div className="flex-1 flex items-center justify-center relative z-20 w-full group-hover/spotlight:scale-110 transition-transform duration-500">
-                                {/* Decorative glow behind the PNG */}
-                                <div
-                                    className="absolute inset-0 rounded-full blur-3xl opacity-0 group-hover/spotlight:opacity-60 transition-opacity"
-                                    style={{ backgroundColor: `${sport.color}40` }} // 25% opacity
-                                />
-
-                                <Image
-                                    src={sport.image}
-                                    alt={`${sport.title} Icon`}
-                                    width={160}
-                                    height={160}
-                                    className="relative z-30 object-contain drop-shadow-lg"
-                                />
-                            </div>
-
-                            {/* Title at the bottom */}
-                            <h3
-                                className="text-sm font-bold tracking-widest uppercase relative z-20  text-center font-ethnocentric w-full break-words px-2 leading-tight"
-                                style={{ color: sport.color }}
+                            <CardSpotlight
+                                className="h-full w-full flex flex-col items-center justify-between p-4 border border-white/10 rounded-xl"
+                                color={sport.color}
+                                backgroundImage="/events_card_bg.png"
                             >
-                                {sport.title}
-                            </h3>
-                        </CardSpotlight>
+                                {/* PNG Container - Centered */}
+                                <div className="flex-1 flex items-center justify-center relative z-20 w-full group-hover/spotlight:scale-110 transition-transform duration-500">
+                                    {/* Decorative glow behind the PNG */}
+                                    <div
+                                        className="absolute inset-0 rounded-full blur-3xl opacity-0 group-hover/spotlight:opacity-60 transition-opacity"
+                                        style={{ backgroundColor: `${sport.color}40` }} // 25% opacity
+                                    />
+
+                                    <Image
+                                        src={sport.image}
+                                        alt={`${sport.title} Icon`}
+                                        width={160}
+                                        height={160}
+                                        className="relative z-30 object-contain drop-shadow-lg"
+                                    />
+                                </div>
+
+                                {/* Title at the bottom */}
+                                <h3
+                                    className="text-sm font-bold tracking-widest uppercase relative z-20  text-center font-ethnocentric w-full break-words px-2 leading-tight"
+                                    style={{ color: sport.color }}
+                                >
+                                    {sport.title}
+                                </h3>
+                            </CardSpotlight>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
 
         </section>
