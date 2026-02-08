@@ -58,7 +58,7 @@ const Footer = () => {
             {/* Watermark Logo (Right) - Sportech */}
             <div className="absolute -bottom-[10px] right-10 md:-bottom-[20px] md: right-35 opacity-20 pointer-events-none select-none">
                 <Image
-                    src="/sportech_logo.png"
+                    src="/sportech_logo_with_name.png"
                     alt="Sportech Watermark"
                     width={200}
                     height={200}
