@@ -15,7 +15,7 @@ const Footer = () => {
                     priority
                 />
                 {/* Moderate Dark Overlay for contrast */}
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/70" />
             </div>
 
             <div className="container mx-auto px-6 lg:px-20 relative z-10 flex flex-col md:flex-row items-center justify-center">
@@ -58,7 +58,7 @@ const Footer = () => {
             {/* Watermark Logo (Right) - Sportech */}
             <div className="absolute -bottom-[10px] right-10 md:-bottom-[20px] md: right-35 opacity-20 pointer-events-none select-none">
                 <Image
-                    src="/sportech_logo.png"
+                    src="/sportech_logo_with_name.png"
                     alt="Sportech Watermark"
                     width={200}
                     height={200}
