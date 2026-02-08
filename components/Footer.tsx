@@ -45,24 +45,24 @@ const Footer = () => {
             </div>
 
             {/* Watermark Logo (Left) - BSA */}
-            <div className="absolute -bottom-[10px] -left-20 md:-bottom-[20px] md:-left-1 opacity-20 pointer-events-none select-none">
+            <div className="absolute top-1/2 -translate-y-1/2 left-0 md:left-4 opacity-20 pointer-events-none select-none z-0">
                 <Image
                     src="/bsa_logo_blue.png"
                     alt="BSA Watermark"
                     width={450}
                     height={450}
-                    className="object-contain" // Kept color as requested "blue logo", removed grayscale
+                    className="object-contain w-20 h-20 sm:w-32 sm:h-32 md:w-60 md:h-60 lg:w-80 lg:h-80"
                 />
             </div>
 
             {/* Watermark Logo (Right) - Sportech */}
-            <div className="absolute -bottom-[10px] right-10 md:-bottom-[20px] md: right-35 opacity-20 pointer-events-none select-none">
+            <div className="absolute top-1/2 -translate-y-1/2 right-0 md:right-4 opacity-20 pointer-events-none select-none z-0">
                 <Image
                     src="/sportech_logo_with_name.png"
                     alt="Sportech Watermark"
                     width={200}
                     height={200}
-                    className="object-contain"
+                    className="object-contain w-14 h-14 sm:w-20 sm:h-20 md:w-60 md:h-60 lg:w-80 lg:h-80"
                 />
             </div>
 
