@@ -26,82 +26,82 @@ const teamMembers = [
     {
         name: "Tatsam Sharma",
         role: "General Secretary",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Talin Sharma",
         role: "Deputy General Secretary",
-        image: "/pic.jpeg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Dushyant Soni",
         role: "Deputy General Secretary PG",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Vara ",
         role: "Overall Coordinator",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Arjun Sharma",
         role: "Co-Overall Coordinator",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/pic.jpeg",
+       image: "/dp_place.jpg",
     }
 ];
 
@@ -237,14 +237,14 @@ export default function TeamPage() {
                     </motion.div>
 
                     {/* Section 3: Core Team Members */}
-                    <motion.div variants={sectionVariants} className="w-full flex flex-col items-center gap-2">
+                    <motion.div variants={sectionVariants} className="w-full flex flex-col items-center sm:gap-2 gap-2">
                         <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase text-white/80 font-ethno">
                             Core Team Members
                         </h2>
-                        <div className="flex flex-wrap justify-evenly gap-4 w-full">
+                        <div className="flex flex-wrap justify-evenly sm:gap-4 gap-1 w-full">
                             {teamMembers.slice(5).map((member, index) => (
-                                <div key={index} className="flex justify-center">
-                                    <div className="relative  w-[45vw] md:w-60 rounded-2xl border border-neutral-800">
+                                <div key={index} className="flex justify-center w-[46%] sm:w-auto">
+                                    <div className="relative w-full sm:w-60 rounded-2xl border border-neutral-800">
                                         <GlowingEffect
                                             spread={60}
                                             glow={true}
@@ -256,10 +256,10 @@ export default function TeamPage() {
                                         <div className="relative flex flex-col justify-end overflow-hidden rounded-xl bg-black p-4">
                                             <div className="relative flex flex-col gap-2 items-center">
                                                 <div className="w-full text-center mb-1">
-                                                    <div className="text-sm font-bold text-white text-wrap leading-tight">
+                                                    <div className="text-[10px] sm:text-sm font-bold text-white text-wrap leading-tight">
                                                         {member.name}
                                                     </div>
-                                                    <p className="text-neutral-300 text-[10px] mt-1 text-wrap">
+                                                    <p className="text-neutral-300 sm:text-[10px] text-[8px] mt-1 text-wrap">
                                                         {member.role}
                                                     </p>
                                                 </div>
@@ -268,7 +268,7 @@ export default function TeamPage() {
                                                         src={member.image}
                                                         height="600"
                                                         width="500"
-                                                        className="h-48 w-full object-cover rounded-lg"
+                                                        className="h-32 sm:h-48 w-full object-cover rounded-lg"
                                                         alt={member.name}
                                                     />
                                                 </div>
