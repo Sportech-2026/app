@@ -75,7 +75,7 @@ export default function Sponsors() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-4xl md:text-6xl font-ethnocentric text-center text-white mb-16 tracking-wider"
                 >
-                    OUR <span className="text-blue-500">SPONSORS</span>
+                    OUR <span className="text-cyan-400">SPONSORS</span>
                 </motion.h1>
 
                 {/* Title Sponsors */}
