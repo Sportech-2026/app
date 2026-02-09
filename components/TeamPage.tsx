@@ -26,7 +26,7 @@ const teamMembers = [
     {
         name: "Tatsam Sharma",
         role: "General Secretary",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Talin Sharma",
@@ -36,72 +36,72 @@ const teamMembers = [
     {
         name: "Dushyant Soni",
         role: "Deputy General Secretary PG",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Vara ",
         role: "Overall Coordinator",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Arjun Sharma",
         role: "Co-Overall Coordinator",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-       image: "/dp_place.jpg",
+        image: "/dp_place.jpg",
     }
 ];
 
@@ -111,7 +111,7 @@ export default function TeamPage() {
             {/* Fixed Background */}
             <div className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none">
                 <Image
-                    src="/background.png"
+                    src="/backgrounds/background.png"
                     alt="Team Background"
                     fill
                     className="object-cover opacity-60"
@@ -123,7 +123,7 @@ export default function TeamPage() {
             {/* Right Side Image - Scrolls with content
             <div className="absolute right-0 top-0 h- w-[150px] md:w-[150px] pointer-events-none z-0">
                 <Image
-                    src="/team_side.jpeg"
+                    src="/backgrounds/team_bg.jpeg"
                     alt="Decoration Right"
                     fill
                     className="object-cover scale-x-[-1]"

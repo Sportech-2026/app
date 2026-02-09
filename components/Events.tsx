@@ -125,7 +125,7 @@ export default function EventsPage() {
             {/* Background Image */}
             <div className="fixed inset-0 -z-10">
                 <Image
-                    src="/bg_events.png"
+                    src="/backgrounds/bg_events.png"
                     alt="Events Background"
                     fill
                     className="object-cover"
@@ -167,7 +167,7 @@ export default function EventsPage() {
                             <CardSpotlight
                                 className="h-full w-full flex flex-col items-center justify-between p-4 border border-white/10 rounded-xl"
                                 color={sport.color}
-                                backgroundImage="/events_card_bg.png"
+                                backgroundImage="/backgrounds/events_card_bg.png"
                             >
                                 {/* PNG Container - Centered */}
                                 <div className="flex-1 flex items-center justify-center relative z-20 w-full group-hover/spotlight:scale-110 transition-transform duration-500">

@@ -160,7 +160,7 @@ export default function SportsLoader({ onLoadingComplete }: { onLoadingComplete?
                                         className="absolute z-10"
                                     >
                                         <Image
-                                            src="/sportech_logo.png"
+                                            src="/logos/sportech_logo.png"
                                             alt="Sportech Logo"
                                             width={60}
                                             height={60}
@@ -291,7 +291,7 @@ export default function SportsLoader({ onLoadingComplete }: { onLoadingComplete?
                         className="flex items-center justify-center"
                     >
                         <Image
-                            src="/sportech_logo.png"
+                            src="/logos/sportech_logo.png"
                             alt="Sportech Logo"
                             width={50}
                             height={50}

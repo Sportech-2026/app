@@ -36,7 +36,7 @@ export default function Navbar() {
                 >
                     <Link href="/" className="cursor-pointer block w-full h-full relative">
                         <Image
-                            src="/iitd_logo 1.png"
+                            src="/logos/iitd_logo 1.png"
                             alt="IITD Logo"
                             fill
                             className="object-contain"
@@ -53,7 +53,7 @@ export default function Navbar() {
                 >
                     <Link href="/" className="cursor-pointer block w-full h-full relative">
                         <Image
-                            src="/sportech_logo.png"
+                            src="/logos/sportech_logo.png"
                             alt="Sportech Logo"
                             fill
                             className="object-contain"
@@ -110,7 +110,7 @@ export default function Navbar() {
                     <div className="w-16 h-16 relative mx-2 -translate-y-1">
                         <Link href="/" className="cursor-pointer block w-full h-full relative">
                             <Image
-                                src="/sportech_logo.png"
+                                src="/logos/sportech_logo.png"
                                 alt="Sportech Logo"
                                 fill
                                 className="object-contain"
