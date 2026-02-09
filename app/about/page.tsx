@@ -45,7 +45,7 @@ export default function AboutPage() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/about-bg.png"
+                    src="/backgrounds/about-bg.png"
                     alt="Background"
                     fill
                     className="object-cover opacity-40"

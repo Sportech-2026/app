@@ -8,7 +8,7 @@ const Footer = () => {
             {/* Background Image */}
             <div className="absolute inset-0 w-full h-full z-0">
                 <Image
-                    src="/footer_bg.png"
+                    src="/backgrounds/footer_bg.png"
                     alt="Footer Background"
                     fill
                     className="object-cover"
@@ -47,7 +47,7 @@ const Footer = () => {
             {/* Watermark Logo (Left) - BSA */}
             <div className="absolute top-1/2 -translate-y-1/2 left-0 md:left-4 opacity-20 pointer-events-none select-none z-0">
                 <Image
-                    src="/bsa_logo_blue.png"
+                    src="/logos/bsa_logo_blue-with-name.png"
                     alt="BSA Watermark"
                     width={450}
                     height={450}
@@ -58,7 +58,7 @@ const Footer = () => {
             {/* Watermark Logo (Right) - Sportech */}
             <div className="absolute top-1/2 -translate-y-1/2 right-0 md:right-4 opacity-20 pointer-events-none select-none z-0">
                 <Image
-                    src="/sportech_logo_with_name.png"
+                    src="/logos/sportech_logo_with_name.png"
                     alt="Sportech Watermark"
                     width={200}
                     height={200}

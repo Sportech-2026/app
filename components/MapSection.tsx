@@ -8,7 +8,7 @@ export default function MapSection() {
         <section className="w-full py-20 relative flex flex-col items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0 bg-blue-500/50">
                 <Image
-                    src="/map_bg.png"
+                    src="/backgrounds/map_bg.png"
                     alt="Background"
                     fill
                     className="object-cover opacity-60"
@@ -33,7 +33,7 @@ export default function MapSection() {
                     className="relative w-full h-[70vh] md:h-[90vh] rounded-2xl overflow-hidden  " // Increased height
                 >
                     <Image
-                        src="/iitd-map-2.png"
+                        src="/maps/iitd-map-2.png"
                         alt="IIT Delhi Map"
                         fill
                         className="object-contain" // Changed to contain to show full map

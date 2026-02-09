@@ -68,7 +68,7 @@ export default function Hero() {
                 transition={{ duration: 1.5, delay: 0.5 }}
             >
                 <Image
-                    src="/sportech_blurred1.png"
+                    src="/logos/sportech_logo.png"
                     alt="Atmosphere Top"
                     fill
                     className="object-contain scale-84 opacity-12 mix-blend-overlay"
@@ -84,7 +84,7 @@ export default function Hero() {
                 transition={{ duration: 1, ease: "easeOut" }}
             >
                 <Image
-                    src="/hero.png"
+                    src="/heroes/sportech_hero.png"
                     alt="Sportech"
                     fill
                     className="object-contain"
@@ -101,7 +101,7 @@ export default function Hero() {
                 transition={{ duration: 1.5, delay: 0.7 }}
             >
                 <Image
-                    src="/sportech_blurred1.png"
+                    src="/logos/sportech_logo.png"
                     alt="Atmosphere Bottom"
                     fill
                     className="object-contain scale-84 mix-blend-overlay opacity-12"
@@ -133,7 +133,7 @@ export default function Hero() {
                     transition={{ duration: 0.2 }}
                 >
                     <Image
-                        src="/bsaLogo.png"
+                        src="/logos/bsaLogo.png"
                         alt="Cursor"
                         width={60}
                         height={60}
