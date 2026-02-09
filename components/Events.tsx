@@ -235,7 +235,7 @@ export default function EventsPage() {
                             <CardSpotlight
                                 className="h-full w-full flex items-center justify-center p-4 border border-white/10 rounded-xl"
                                 color={sport.color}
-                                backgroundImage="/events_card_bg.png"
+                                backgroundImage="/backgrounds/events_card_bg.png"
                             >
                                 <h3
                                     className="text-sm font-bold tracking-widest uppercase relative z-20 text-center font-ethnocentric leading-tight px-1 group-hover/spotlight:scale-110 transition-transform duration-500"
