@@ -26,82 +26,82 @@ const teamMembers = [
     {
         name: "Tatsam Sharma",
         role: "General Secretary",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Talin Sharma",
         role: "Deputy General Secretary",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Dushyant Soni",
         role: "Deputy General Secretary PG",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Vara ",
         role: "Overall Coordinator",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Arjun Sharma",
         role: "Co-Overall Coordinator",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     },
     {
         name: "Emily Davis",
         role: "CTM",
-        image: "/dp_place.jpg",
+        image: "/misc/dp_place.jpg",
     }
 ];
 

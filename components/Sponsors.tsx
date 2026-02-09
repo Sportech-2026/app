@@ -6,18 +6,18 @@ import { StarsBackground } from "@/components/ui/stars-background";
 
 const sponsors = {
     title: [
-        { name: "Title Sponsor", logo: "/sportech_logo.png" },
+        { name: "Title Sponsor", logo: "/logos/sportech_logo.png" },
     ],
     associates: [
-        { name: "Placeholder", logo: "/iitd_logo 1.png" },
-        { name: "Associate 1", logo: "/sportech_logo.png" },
-        { name: "Associate 2", logo: "/sportech_logo.png" },
-        { name: "Associate 3", logo: "/iitd_logo 1.png" },
-        { name: "Associate 4", logo: "/sportech_logo.png" },
-        { name: "Associate 5", logo: "/iitd_logo 1.png" },
-        { name: "Associate 6", logo: "/sportech_logo.png" },
-        { name: "Associate 7", logo: "/iitd_logo 1.png" },
-        { name: "Associate 8", logo: "/sportech_logo.png" },
+        { name: "Placeholder", logo: "/logos/iitd_logo 1.png" },
+        { name: "Associate 1", logo: "/logos/sportech_logo.png" },
+        { name: "Associate 2", logo: "/logos/sportech_logo.png" },
+        { name: "Associate 3", logo: "/logos/iitd_logo 1.png" },
+        { name: "Associate 4", logo: "/logos/sportech_logo.png" },
+        { name: "Associate 5", logo: "/logos/iitd_logo 1.png" },
+        { name: "Associate 6", logo: "/logos/sportech_logo.png" },
+        { name: "Associate 7", logo: "/logos/iitd_logo 1.png" },
+        { name: "Associate 8", logo: "/logos/sportech_logo.png" },
     ],
 };
 

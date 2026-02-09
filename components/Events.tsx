@@ -26,62 +26,62 @@ const cardVariants: Variants = {
 const formalSports = [
     {
         title: "Cricket",
-        image: "/sports pngs/cricket_icon.png",
+        image: "/icons/sports/cricket_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Football",
-        image: "/sports pngs/football_icon.png",
+        image: "/icons/sports/football_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Basketball",
-        image: "/sports pngs/basketball_icon.png",
+        image: "/icons/sports/basketball_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Badminton",
-        image: "/sports pngs/badminton_icon.png",
+        image: "/icons/sports/badminton_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Tennis",
-        image: "/sports pngs/Tennis_icon.png",
+        image: "/icons/sports/Tennis_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Volleyball",
-        image: "/sports pngs/volleyball_icon.png",
+        image: "/icons/sports/volleyball_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Hockey",
-        image: "/sports pngs/hockey_icon.png",
+        image: "/icons/sports/hockey_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Squash",
-        image: "/sports pngs/squash_icon.png",
+        image: "/icons/sports/squash_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Table Tennis",
-        image: "/sports pngs/tt_icon.png",
+        image: "/icons/sports/tt_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Athletics",
-        image: "/sports pngs/athletics_icon.png",
+        image: "/icons/sports/athletics_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Chess",
-        image: "/sports pngs/chess_icon.png",
+        image: "/icons/sports/chess_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Weightlifting",
-        image: "/sports pngs/weightlifiing_icon.png",
+        image: "/icons/sports/weightlifiing_icon.png",
         color: "#3B82F6", // Blue
     },
 ];
@@ -89,32 +89,32 @@ const formalSports = [
 const informalSports = [
     {
         title: "Pitthu",
-        // image: "/sports pngs/Pitthu_icon.png",
+        // image: "/icons/sports/Pitthu_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Dodgeball",
-        // image: "/sports pngs/dodgeball_icon.png",    
+        // image: "/icons/sports/dodgeball_icon.png",    
         color: "#3B82F6", // Blue
     },
     {
         title: "Kabaddi",
-        // image: "/sports pngs/kabaddi_icon.png",
+        // image: "/icons/sports/kabaddi_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Frisbee",
-        // image: "/sports pngs/frisbee_icon.png",
+        // image: "/icons/sports/frisbee_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Footvolley",
-        // image: "/sports pngs/footvolley_icon.png",
+        // image: "/icons/sports/footvolley_icon.png",
         color: "#3B82F6", // Blue
     },
     {
         title: "Smash Karts (Online)",
-        // image: "/sports pngs/smash_karts_icon.png",
+        // image: "/icons/sports/smash_karts_icon.png",
         color: "#3B82F6", // Blue
     },
 ];
