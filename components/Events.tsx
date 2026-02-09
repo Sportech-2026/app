@@ -23,7 +23,7 @@ const cardVariants: Variants = {
     },
 };
 
-const sports = [
+const formalSports = [
     {
         title: "Cricket",
         image: "/sports pngs/cricket_icon.png",
@@ -86,9 +86,42 @@ const sports = [
     },
 ];
 
+const informalSports = [
+    {
+        title: "Pitthu",
+        // image: "/sports pngs/Pitthu_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Dodgeball",
+        // image: "/sports pngs/dodgeball_icon.png",    
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Kabaddi",
+        // image: "/sports pngs/kabaddi_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Frisbee",
+        // image: "/sports pngs/frisbee_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Footvolley",
+        // image: "/sports pngs/footvolley_icon.png",
+        color: "#3B82F6", // Blue
+    },
+    {
+        title: "Smash Karts (Online)",
+        // image: "/sports pngs/smash_karts_icon.png",
+        color: "#3B82F6", // Blue
+    },
+];
+
 export default function EventsPage() {
     return (
-        <section className="relative w-full min-h-screen overflow-y-auto text-white py-20">
+        <section className="relative w-full min-h-screen overflow-y-auto text-white py-20 pb-40">
             {/* Background Image */}
             <div className="fixed inset-0 -z-10">
                 <Image
@@ -105,10 +138,19 @@ export default function EventsPage() {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-4xl font-bold tracking-wider uppercase md:text-6xl mb-12 mt-6 text-center font-ethnocentric"
+                    className="text-4xl font-bold tracking-wider uppercase md:text-6xl mb-4 mt-6 text-center font-ethnocentric"
                 >
                     Formals
                 </motion.h2>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                    className="text-sm md:text-base text-center text-gray-300 font-ethnocentric mb-12 tracking-wider"
+                >
+                    POC: Name | +91 XXXXX XXXXX
+                </motion.p>
 
                 <motion.div
                     variants={containerVariants}
@@ -116,7 +158,7 @@ export default function EventsPage() {
                     animate="visible"
                     className="flex flex-wrap justify-center gap-12 w-full max-w-7xl"
                 >
-                    {sports.map((sport, index) => (
+                    {formalSports.map((sport, index) => (
                         <motion.div
                             key={index}
                             variants={cardVariants}
@@ -147,6 +189,56 @@ export default function EventsPage() {
                                 {/* Title at the bottom */}
                                 <h3
                                     className="text-sm font-bold tracking-widest uppercase relative z-20  text-center font-ethnocentric w-full break-words px-2 leading-tight"
+                                    style={{ color: sport.color }}
+                                >
+                                    {sport.title}
+                                </h3>
+                            </CardSpotlight>
+                        </motion.div>
+                    ))}
+                </motion.div>
+
+                {/* Informals Section */}
+                <motion.h2
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="text-4xl font-bold tracking-wider uppercase md:text-6xl mb-4 mt-24 text-center font-ethnocentric"
+                >
+                    Informals
+                </motion.h2>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2, duration: 0.5 }}
+                    className="text-sm md:text-base text-center text-gray-300 font-ethnocentric mb-12 tracking-wider"
+                >
+                    POC: Name | +91 XXXXX XXXXX
+                </motion.p>
+
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="flex flex-wrap justify-center gap-12 w-full max-w-7xl"
+                >
+                    {informalSports.map((sport, index) => (
+                        <motion.div
+                            key={index}
+                            variants={cardVariants}
+                            className="h-[100px] w-[80%] max-w-[320px] sm:w-[45%] md:w-[30%] lg:w-[18%] xl:w-[16%]"
+                        >
+                            <CardSpotlight
+                                className="h-full w-full flex items-center justify-center p-4 border border-white/10 rounded-xl"
+                                color={sport.color}
+                                backgroundImage="/events_card_bg.png"
+                            >
+                                <h3
+                                    className="text-sm font-bold tracking-widest uppercase relative z-20 text-center font-ethnocentric leading-tight px-1 group-hover/spotlight:scale-110 transition-transform duration-500"
                                     style={{ color: sport.color }}
                                 >
                                     {sport.title}
