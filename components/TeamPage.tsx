@@ -71,7 +71,7 @@ const teamMembers = [
     {
         name: "Harsh Agarwal",
         role: "Technical CTM",
-        image: "/team/harsh.jpg",
+        image: "/team/harsh.DNG",
         linkedin: "https://www.linkedin.com/in/harsh-agarwal-2b7654237/",
         email: "me2230523@iitd.ac.in"
     },
