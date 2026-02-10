@@ -86,8 +86,8 @@ export default function AboutPage() {
                     {/* Stats Section */}
                     <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <StatsCard icon={<Users className="w-8 h-8 text-cyan-400" />} number="5000+" label="Participants" />
-                        <StatsCard icon={<Trophy className="w-8 h-8 text-yellow-400" />} number="20+" label="Sports" />
-                        <StatsCard icon={<School className="w-8 h-8 text-purple-400" />} number="100+" label="Colleges" />
+                        <StatsCard icon={<Trophy className="w-8 h-8 text-yellow-400" />} number="10+" label="Sports" />
+                        <StatsCard icon={<School className="w-8 h-8 text-purple-400" />} number="50+" label="Colleges" />
                     </motion.div>
                 </motion.div>
 
@@ -106,32 +106,33 @@ export default function AboutPage() {
                     <div className="flex flex-col items-center mb-16">
                         <div className="flex items-center gap-3 bg-white/5 px-6 py-3 rounded-full backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
                             <Mail className="w-6 h-6 text-cyan-400" />
-                            <span className="text-lg md:text-xl tracking-wide" style={{ fontFamily: 'var(--font-geist-sans)' }}>contact@sportech-iitd.in</span>
+                            <span className="text-lg md:text-xl tracking-wide" style={{ fontFamily: 'var(--font-geist-sans)' }}>events@sportech-iitd.com</span>
                         </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         <ContactCard
-                            name="John Doe"
+                            name="Vara Prasad"
                             role="Overall Coordinator"
-                            image="/placeholder-user.jpg" // Placeholder
-                            email="john.doe@sportech.in"
-                            phone="+91 98765 43210"
+                            image="/team/vara.jpg"
+                            email="overall-coordinator@sportech-iitd.com"
+                            linkedin="https://www.linkedin.com/in/vara-prasad-85b328289"
                         />
                         <ContactCard
-                            name="Jane Smith"
-                            role="Events Head"
-                            image="/placeholder-user.jpg" // Placeholder
-                            email="jane.smith@sportech.in"
-                            phone="+91 87654 32109"
+                            name="Tatsam Ranjan Sharma"
+                            role="General Secretary"
+                            image="/team/tatsam.jpg"
+                            email="bsagsec@iitd.ac.in"
+                            linkedin="https://www.linkedin.com/in/tatsam?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                         />
                         <ContactCard
-                            name="Alex Johnson"
-                            role="Marketing Head"
-                            image="/placeholder-user.jpg" // Placeholder
-                            email="alex.johnson@sportech.in"
-                            phone="+91 76543 21098"
+                            name="Arjun Sharma"
+                            role="Co-Overall Co-ordinator"
+                            image="/team/arjun.jpg"
+                            email="tt1222137@iitd.ac.in"
+                            linkedin="https://www.linkedin.com/in/arjunsharma05/"
                         />
+
                     </div>
                 </motion.div>
 
@@ -155,37 +156,41 @@ function StatsCard({ icon, number, label }: { icon: React.ReactNode, number: str
     );
 }
 
-function ContactCard({ name, role, image, email, phone }: { name: string, role: string, image: string, email: string, phone: string }) {
+function ContactCard({ name, role, image, email, phone, linkedin }: { name: string, role: string, image: string, email: string, phone?: string, linkedin?: string }) {
     return (
         <motion.div
             variants={cardVariants}
             whileHover="hover"
-            className="bg-zinc-900/60 backdrop-blur-md rounded-2xl overflow-hidden border border-white/5 relative group"
+            className="bg-zinc-900/60 backdrop-blur-md rounded-2xl overflow-hidden border border-white/5 relative group h-full"
         >
             {/* Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-            <div className="flex flex-col items-center p-8 relative z-10">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-cyan-500/50 mb-6 shadow-[0_0_20px_rgba(6,182,212,0.3)] bg-zinc-800">
-                    {/* Placeholder for now if image is missing */}
-                    <div className="w-full h-full flex items-center justify-center bg-zinc-800 text-zinc-600">
-                        <Users className="w-12 h-12" />
-                    </div>
+            <div className="flex flex-col items-center px-6 pt-6 pb-4 relative z-10 h-full">
+                <div className="w-48 h-48 rounded-full overflow-hidden border-2 border-cyan-500/50 mb-3 shadow-[0_0_20px_rgba(6,182,212,0.3)] bg-zinc-800 relative">
+                    <Image
+                        src={image}
+                        alt={name}
+                        fill
+                        className="object-cover"
+                    />
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-1 tracking-wider">{name}</h3>
-                <p className="text-cyan-400 text-xs tracking-widest mb-6 uppercase">{role}</p>
+                <h3 className="text-xl font-bold text-white mb-0.5 tracking-wider text-center">{name}</h3>
+                <p className="text-cyan-400 text-xs tracking-widest mb-3 uppercase text-center">{role}</p>
 
-                <div className="flex gap-4 mb-6">
-                    <SocialIcon icon={<Instagram className="w-5 h-5" />} href="#" />
-                    <SocialIcon icon={<Linkedin className="w-5 h-5" />} href="#" />
+                <div className="flex gap-4 mt-auto">
+                    {/* <SocialIcon icon={<Instagram className="w-5 h-5" />} href="#" /> */}
+                    {linkedin && <SocialIcon icon={<Linkedin className="w-5 h-5" />} href={linkedin} />}
                     <SocialIcon icon={<Mail className="w-5 h-5" />} href={`mailto:${email}`} />
                 </div>
 
-                <div className="flex items-center gap-2 text-gray-400 text-sm font-sans" style={{ fontFamily: 'var(--font-geist-sans)' }}>
-                    <Phone className="w-4 h-4 text-cyan-500" />
-                    <span>{phone}</span>
-                </div>
+                {phone && (
+                    <div className="flex items-center gap-2 text-gray-400 text-sm font-sans mt-3" style={{ fontFamily: 'var(--font-geist-sans)' }}>
+                        <Phone className="w-4 h-4 text-cyan-500" />
+                        <span>{phone}</span>
+                    </div>
+                )}
             </div>
         </motion.div>
     );
@@ -195,7 +200,7 @@ function SocialIcon({ icon, href }: { icon: React.ReactNode, href: string }) {
     return (
         <a
             href={href}
-            className="p-2 rounded-full bg-white/5 hover:bg-cyan-500 hover:text-white text-gray-400 transition-all duration-300 hover:scale-110"
+            className="p-1.5 rounded-full bg-white/5 hover:bg-cyan-500 hover:text-white text-gray-400 transition-all duration-300 hover:scale-110"
         >
             {icon}
         </a>
