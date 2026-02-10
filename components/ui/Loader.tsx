@@ -134,7 +134,7 @@ export default function SportsLoader({ onLoadingComplete }: { onLoadingComplete?
                     className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-gradient-to-br from-[#020617] via-[#0c1929] to-[#020617]"
                 >
                     {/* Ball Animation Area */}
-                    <div className="relative w-96 h-40 flex items-end justify-center overflow-hidden mb-4">
+                    <div className="relative w-96 h-40 flex items-end justify-center overflow-hidden mb-4 [mask-image:linear-gradient(to_right,transparent,black_25%,black_75%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_25%,black_75%,transparent)]">
                         <AnimatePresence mode="wait">
                             {/* Sportech - First */}
                             {currentBall === 0 && (

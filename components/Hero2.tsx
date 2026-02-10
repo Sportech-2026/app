@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { SparklesCore } from "./ui/sparkles";
 import Book3D from "./ui/3d-book";
+import MarqueeBanner from "./MarqueeBanner";
 
 
 
@@ -68,22 +69,6 @@ export default function Hero2() {
         </div>
       </div>
 
-      {/* Date image - bottom left */}
-      <motion.div
-        initial={{ opacity: 0, x: -30 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 md:bottom-8 z-30 pointer-events-none bg-black/60 backdrop-blur-md rounded-xl"
-      >
-        <Image
-          src="/heroes/date.png"
-          alt="Date"
-          width={300}
-          height={150}
-          className="object-contain"
-          priority
-        />
-      </motion.div>
 
       {/* Hero waves - full screen */}
       <motion.div
@@ -129,6 +114,13 @@ export default function Hero2() {
             />
           </motion.div>
         </motion.div> */}
+
+      {/* Marquee Banner - fades at edges, full opacity in center */}
+      <div
+        className="absolute bottom-0 left-0 right-0 z-40 md:[-webkit-mask-image:linear-gradient(to_right,transparent_10%,black_50%,black_50%,transparent_85%)] md:[mask-image:linear-gradient(to_right,transparent_15%,black_50%,black_50%,transparent_85%)]"
+      >
+        <MarqueeBanner />
+      </div>
     </section>
   );
 }
