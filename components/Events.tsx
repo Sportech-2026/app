@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { motion, Variants } from "framer-motion";
+import { Mail } from "lucide-react";
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -147,9 +148,9 @@ export default function EventsPage() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
-                    className="text-sm md:text-base text-center text-gray-300 font-ethnocentric mb-12 tracking-wider"
+                    className="text-sm md:text-base text-center text-gray-300 mb-12 tracking-wider flex justify-center items-center gap-2"
                 >
-                    POC: Name | +91 XXXXX XXXXX
+                    <span className="font-semibold">POC: Krish</span> | +91 XXXXX XXXXX
                 </motion.p>
 
                 <motion.div
@@ -214,9 +215,14 @@ export default function EventsPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2, duration: 0.5 }}
-                    className="text-sm md:text-base text-center text-gray-300 font-ethnocentric mb-12 tracking-wider"
+                    className="text-sm md:text-base text-center text-gray-300 mb-12 tracking-wider flex justify-center items-center gap-2"
                 >
-                    POC: Name | +91 XXXXX XXXXX
+                    <span className="font-semibold">POC: Vartika</span>
+                    <span className="hidden md:inline">|</span>
+                    <a href="mailto:bb1230918@iitd.ac.in" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+                        <Mail className="w-4 h-4" />
+                        bb1230918@iitd.ac.in
+                    </a>
                 </motion.p>
 
                 <motion.div

@@ -33,12 +33,12 @@ const Footer = () => {
 
                     {/* Socials */}
                     <div className="flex gap-6 pt-4 justify-center">
-                        <a href="mailto:sportech@iitd.ac.in" className="text-white hover:text-[#4ceaee] transition-colors hover:drop-shadow-[0_0_8px_rgba(76,234,238,0.8)]">
+                        <a href="mailto:events@sportech-iitd.com" className="text-white hover:text-[#4ceaee] transition-colors hover:drop-shadow-[0_0_8px_rgba(76,234,238,0.8)]">
                             <Mail size={24} />
                         </a>
-                        <Link href="#" className="text-white hover:text-[#4ceaee] transition-colors hover:drop-shadow-[0_0_8px_rgba(76,234,238,0.8)]"><Linkedin size={24} /></Link>
-                        <Link href="#" className="text-white hover:text-[#4ceaee] transition-colors hover:drop-shadow-[0_0_8px_rgba(76,234,238,0.8)]"><Instagram size={24} /></Link>
-                        <Link href="#" className="text-white hover:text-[#4ceaee] transition-colors hover:drop-shadow-[0_0_8px_rgba(76,234,238,0.8)]"><Youtube size={24} /></Link>
+                        {/* <Link href="#" className="text-white hover:text-[#4ceaee] transition-colors hover:drop-shadow-[0_0_8px_rgba(76,234,238,0.8)]"><Linkedin size={24} /></Link> */}
+                        <Link href="https://www.instagram.com/sportech.iitd" target="/" className="text-white hover:text-[#4ceaee] transition-colors hover:drop-shadow-[0_0_8px_rgba(76,234,238,0.8)]"><Instagram size={24} /></Link>
+                        {/* <Link href="#" className="text-white hover:text-[#4ceaee] transition-colors hover:drop-shadow-[0_0_8px_rgba(76,234,238,0.8)]"><Youtube size={24} /></Link> */}
                     </div>
                 </div>
 
