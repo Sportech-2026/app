@@ -113,7 +113,7 @@ const teamMembers = [
     {
         name: "Krish Goswami",
         role: "Formal Events CTM",
-        image: "/misc/dp_place.jpg",
+        image: "/team/Krish_Goswami_EventsCoordi.jpg",
         email: "me1231218@iitd.ac.in"
     },
     {
