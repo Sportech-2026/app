@@ -19,7 +19,7 @@ export default function Navbar() {
     const navItemsRight = [
         { name: "ABOUT", href: "/about" },
         { name: "TEAM", href: "/team" },
-        { name: "SPONSORS", href: "/sponsors" },
+        { name: "REGISTER", href: "https://linktr.ee/sportech.iitdelhi" },
     ];
 
     const allNavItems = [...navItemsLeft, ...navItemsRight];
@@ -122,10 +122,13 @@ export default function Navbar() {
                     <div className="flex items-center bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-8 py-4">
                         {navItemsRight.map((item, index) => {
                             const isActive = pathname === item.href;
+                            const isExternal = item.href.startsWith("http");
                             return (
                                 <Link
                                     key={item.name}
                                     href={item.href}
+                                    target={isExternal ? "_blank" : undefined}
+                                    rel={isExternal ? "noopener noreferrer" : undefined}
                                     className={`group relative overflow-hidden inline-block text-sm font-medium tracking-wide ${index < navItemsRight.length - 1 ? "mr-6" : ""}`}
                                 >
                                     <span className={`block transition-transform duration-300 ease-out group-hover:-translate-y-full ${isActive ? "text-cyan-400" : "text-white/80"}`}>
@@ -171,16 +174,22 @@ export default function Navbar() {
                             exit={{ x: "100%" }}
                             transition={{ type: "spring", damping: 25, stiffness: 200 }}
                         >
-                            {allNavItems.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className="text-lg font-medium  font-ethnocentric text-white/80 hover:text-white transition-colors tracking-widest border-b border-white/10 pb-4"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    {item.name}
-                                </Link>
-                            ))}
+                            {allNavItems.map((item) => {
+                                const isExternal = item.href.startsWith("http");
+                                return (
+                                    <Link
+                                        key={item.name}
+                                        href={item.href}
+                                        target={isExternal ? "_blank" : undefined}
+                                        rel={isExternal ? "noopener noreferrer" : undefined}
+                                        className="text-lg font-medium  font-ethnocentric text-white/80 hover:text-white transition-colors tracking-widest border-b border-white/10 pb-4"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        {item.name}
+                                        {item.name}
+                                    </Link>
+                                )
+                            })}
                         </motion.div>
                     </>
                 )}

@@ -156,7 +156,7 @@ export default function MarqueeBanner() {
                             className="text-lg md:text-2xl tracking-[0.2em] font-ethnocentric bg-gradient-to-r from-cyan-300 via-sky-200 to-cyan-300 bg-clip-text text-transparent shrink-0"
                             style={{ textShadow: "0 0 30px rgba(34,211,238,0.5), 0 0 60px rgba(34,211,238,0.3)" }}
                         >
-                            MAR 8-11
+                            MAR 5-8
                         </motion.span>
                         <Image
                             src="/logos/bsa_logo_blue-with-name.png"
