@@ -150,7 +150,11 @@ export default function EventsPage() {
                     transition={{ delay: 0.2, duration: 0.5 }}
                     className="text-sm md:text-base text-center text-gray-300 mb-12 tracking-wider flex justify-center items-center gap-2"
                 >
-                    <span className="font-semibold">POC: Krish</span> | +91 XXXXX XXXXX
+                    <span className="font-semibold">POC: Krish</span>
+                    <a href="mailto:me1231218@iitd.ac.in" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+                        <Mail className="w-4 h-4" />
+                        me1231218@iitd.ac.in
+                    </a>
                 </motion.p>
 
                 <motion.div

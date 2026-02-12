@@ -26,6 +26,13 @@ const sectionVariants: Variants = {
 
 const teamMembers = [
     // Secretaries (Index 0-1)
+
+    {
+        name: "Talin Sharma",
+        role: "Deputy General Secretary",
+        image: "/team/talin.png",
+        email: "dgsbsa@iitd.ac.in"
+    },
     {
         name: "Tatsam Ranjan Sharma",
         role: "General Secretary",
@@ -34,10 +41,11 @@ const teamMembers = [
         email: "bsagsec@iitd.ac.in"
     },
     {
-        name: "Talin Sharma",
-        role: "Deputy General Secretary",
-        image: "/misc/dp_place.jpg",
-        email: "dgsbsa@iitd.ac.in"
+        name: "Dushyant Soni",
+        role: "Deputy General Secretary (PG)",
+        image: "/team/dushyant.png",
+        linkedin: "https://www.linkedin.com/in/dushyant-soni-5b7a4a161?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        email: "dgspgbsa@iitd.ac.in"
     },
     // Coordinators (Index 2-3)
     {
@@ -101,6 +109,18 @@ const teamMembers = [
         image: "/team/srijith.jpg",
         linkedin: "https://www.linkedin.com/in/srijith-s-8645052b4?utm_source=share_via&utm_content=profile&utm_medium=member_android",
         email: "me1230548@iitd.ac.in"
+    },
+    {
+        name: "Krish Goswami",
+        role: "Formal Events CTM",
+        image: "/misc/dp_place.jpg",
+        email: "me1231218@iitd.ac.in"
+    },
+    {
+        name: "Yuvraj singh",
+        role: "Hospitality CTM",
+        image: "/team/yuvraj.png",
+        email: "ce1231209@iitd.ac.in"
     }
 ];
 
@@ -142,7 +162,7 @@ export default function TeamPage() {
                             Secretaries
                         </h2>
                         <div className="flex flex-wrap justify-center gap-6 w-full">
-                            {teamMembers.slice(0, 2).map((member, index) => (
+                            {teamMembers.slice(0, 3).map((member, index) => (
                                 <div key={index} className="w-full max-w-sm flex justify-center">
                                     <div className="relative  w-[85vw] md:w-80 rounded-2xl border border-neutral-800">
                                         <GlowingEffect
@@ -198,7 +218,7 @@ export default function TeamPage() {
                             Coordinators
                         </h2>
                         <div className="flex flex-wrap justify-center gap-6 w-full">
-                            {teamMembers.slice(2, 4).map((member, index) => (
+                            {teamMembers.slice(3, 5).map((member, index) => (
                                 <div key={index} className="w-full max-w-sm flex justify-center">
                                     <div className="relative  w-[85vw] md:w-80 rounded-2xl border border-neutral-800">
                                         <GlowingEffect
@@ -254,7 +274,7 @@ export default function TeamPage() {
                             Core Team Members
                         </h2>
                         <div className="flex flex-wrap justify-evenly sm:gap-4 gap-1 w-full">
-                            {teamMembers.slice(4).map((member, index) => (
+                            {teamMembers.slice(5).map((member, index) => (
                                 <div key={index} className="flex justify-center w-[46%] sm:w-auto">
                                     <div className="relative w-full sm:w-60 rounded-2xl border border-neutral-800">
                                         <GlowingEffect
