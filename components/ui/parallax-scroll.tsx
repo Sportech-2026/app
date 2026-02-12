@@ -54,9 +54,12 @@ export const ParallaxScroll = ({
                             key={"grid-1" + idx}
                         >
                             <div className={cn("w-full rounded-lg gap-10 !m-0 !p-0 bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center border border-white/10 relative overflow-hidden group", heights[idx % heights.length])}>
-                                <span className="text-white/20 font-ethnocentric text-xl z-10 text-center px-2">
-                                    IMAGE {idx + 1}
-                                </span>
+                                <Image
+                                    src={el}
+                                    className="object-cover object-center absolute inset-0 w-full h-full transform transition duration-500 hover:scale-110"
+                                    alt="thumbnail"
+                                    fill
+                                />
                             </div>
                         </motion.div>
                     ))}
@@ -67,9 +70,12 @@ export const ParallaxScroll = ({
                     {secondPart.map((el, idx) => (
                         <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
                             <div className={cn("w-full rounded-lg gap-10 !m-0 !p-0 bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center border border-white/10 relative overflow-hidden group", heights[(idx + 1) % heights.length])}>
-                                <span className="text-white/20 font-ethnocentric text-xl z-10 text-center px-2">
-                                    IMAGE {idx + 1 + quarter}
-                                </span>
+                                <Image
+                                    src={el}
+                                    className="object-cover object-center absolute inset-0 w-full h-full transform transition duration-500 hover:scale-110"
+                                    alt="thumbnail"
+                                    fill
+                                />
                             </div>
                         </motion.div>
                     ))}
@@ -80,9 +86,12 @@ export const ParallaxScroll = ({
                     {thirdPart.map((el, idx) => (
                         <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
                             <div className={cn("w-full rounded-lg gap-10 !m-0 !p-0 bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center border border-white/10 relative overflow-hidden group", heights[(idx + 2) % heights.length])}>
-                                <span className="text-white/20 font-ethnocentric text-xl z-10 text-center px-2">
-                                    IMAGE {idx + 1 + 2 * quarter}
-                                </span>
+                                <Image
+                                    src={el}
+                                    className="object-cover object-center absolute inset-0 w-full h-full transform transition duration-500 hover:scale-110"
+                                    alt="thumbnail"
+                                    fill
+                                />
                             </div>
                         </motion.div>
                     ))}
@@ -93,9 +102,12 @@ export const ParallaxScroll = ({
                     {fourthPart.map((el, idx) => (
                         <motion.div style={{ y: translateFourth }} key={"grid-4" + idx}>
                             <div className={cn("w-full rounded-lg gap-10 !m-0 !p-0 bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center border border-white/10 relative overflow-hidden group", heights[(idx + 3) % heights.length])}>
-                                <span className="text-white/20 font-ethnocentric text-xl z-10 text-center px-2">
-                                    IMAGE {idx + 1 + 3 * quarter}
-                                </span>
+                                <Image
+                                    src={el}
+                                    className="object-cover object-center absolute inset-0 w-full h-full transform transition duration-500 hover:scale-110"
+                                    alt="thumbnail"
+                                    fill
+                                />
                             </div>
                         </motion.div>
                     ))}
