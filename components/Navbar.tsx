@@ -186,7 +186,6 @@ export default function Navbar() {
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         {item.name}
-                                        {item.name}
                                     </Link>
                                 )
                             })}
