@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { motion, Variants } from "framer-motion";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, Github } from "lucide-react";
 import Link from "next/link";
 
 const containerVariants: Variants = {
@@ -313,6 +313,91 @@ export default function TeamPage() {
                                                     {member.email && (
                                                         <Link href={`mailto:${member.email}`} className="text-neutral-400 hover:text-white transition-colors">
                                                             <Mail size={14} />
+                                                        </Link>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    {/* Section 4: Technical Coordinators */}
+                    <motion.div variants={sectionVariants} className="w-full flex flex-col items-center gap-6">
+                        <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase text-white/80 font-ethno">
+                            Technical Coordinators
+                        </h2>
+                        <div className="flex flex-wrap justify-center gap-6 w-full">
+                            {[
+                                {
+                                    name: "Ishan Arya",
+                                    role: "Technical Coordinator",
+                                    image: "/team/Ishan_CV_1.jpg",
+                                    linkedin: "www.linkedin.com/in/ishan-arya-339354280",
+                                    github: "https://github.com/ishanarya31",
+                                    email: ""
+                                },
+                                {
+                                    name: "Ajay Mundera",
+                                    role: "Technical Coordinator",
+                                    image: "/team/Ajay.jpg",
+                                    linkedin: "https://www.linkedin.com/in/ajaymundera/",
+                                    github: "https://github.com/ajaymundera0",
+                                    email: ""
+                                },
+                                {
+                                    name: "Ravi Kumawat",
+                                    role: "Technical Coordinator",
+                                    image: "/team/Ravi.jpg",
+                                    github: "https://github.com/Skyblock127",
+                                    email: ""
+                                }
+                            ].map((member, index) => (
+                                <div key={index} className="w-full max-w-sm flex justify-center">
+                                    <div className="relative  w-[85vw] md:w-80 rounded-2xl border border-neutral-800">
+                                        <GlowingEffect
+                                            spread={80}
+                                            glow={true}
+                                            disabled={false}
+                                            proximity={64}
+                                            inactiveZone={0.01}
+                                            borderWidth={4}
+                                        />
+                                        <div className="relative flex h-full flex-col justify-end overflow-hidden rounded-xl bg-black p-6">
+                                            <div className="relative flex flex-col gap-2 items-center">
+                                                <div className="w-full text-center mb-2">
+                                                    <div className="text-lg font-bold text-white text-wrap">
+                                                        {member.name}
+                                                    </div>
+                                                    <p className="text-neutral-300 text-xs mt-1 text-wrap">
+                                                        {member.role}
+                                                    </p>
+                                                </div>
+                                                <div className="w-full">
+                                                    <Image
+                                                        src={member.image}
+                                                        height="1000"
+                                                        width="1000"
+                                                        className="h-60 w-full object-cover rounded-xl"
+                                                        alt={member.name}
+                                                    />
+                                                </div>
+                                                <div className="flex justify-center gap-3 mt-3">
+                                                    {member.linkedin && (
+                                                        <Link href={member.linkedin.startsWith('http') ? member.linkedin : `https://${member.linkedin}`} target="_blank" className="text-neutral-400 hover:text-white transition-colors">
+                                                            <Linkedin size={18} />
+                                                        </Link>
+                                                    )}
+                                                    {member.github && (
+                                                        <Link href={member.github.startsWith('http') ? member.github : `https://${member.github}`} target="_blank" className="text-neutral-400 hover:text-white transition-colors">
+                                                            <Github size={18} />
+                                                        </Link>
+                                                    )}
+                                                    {member.email && (
+                                                        <Link href={`mailto:${member.email}`} className="text-neutral-400 hover:text-white transition-colors">
+                                                            <Mail size={18} />
                                                         </Link>
                                                     )}
                                                 </div>
