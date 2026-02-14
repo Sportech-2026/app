@@ -1,6 +1,6 @@
 "use client";
 import { useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -20,8 +20,20 @@ export const ParallaxScroll = ({
 
     const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
     const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
+
     const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
     const translateFourth = useTransform(scrollYProgress, [0, 1], [0, 200]);
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     const quarter = Math.ceil(images.length / 4);
 
@@ -44,13 +56,13 @@ export const ParallaxScroll = ({
             ref={gridRef}
         >
             <div
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start max-w-[1920px] mx-auto gap-12 py-20 px-10 md:px-20 lg:px-40"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start max-w-[1920px] mx-auto gap-12 py-40 md:py-20 px-10 md:px-20 lg:px-40"
             >
                 {/* Column 1 */}
                 <div className="grid gap-12">
                     {firstPart.map((el, idx) => (
                         <motion.div
-                            style={{ y: translateFirst }}
+                            style={{ y: isMobile ? 0 : translateFirst }}
                             key={"grid-1" + idx}
                         >
                             <div className={cn("w-full rounded-lg gap-10 !m-0 !p-0 bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center border border-white/10 relative overflow-hidden group", heights[idx % heights.length])}>
@@ -68,7 +80,7 @@ export const ParallaxScroll = ({
                 {/* Column 2 */}
                 <div className="grid gap-12">
                     {secondPart.map((el, idx) => (
-                        <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
+                        <motion.div style={{ y: isMobile ? 0 : translateSecond }} key={"grid-2" + idx}>
                             <div className={cn("w-full rounded-lg gap-10 !m-0 !p-0 bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center border border-white/10 relative overflow-hidden group", heights[(idx + 1) % heights.length])}>
                                 <Image
                                     src={el}
@@ -84,7 +96,7 @@ export const ParallaxScroll = ({
                 {/* Column 3 */}
                 <div className="grid gap-12">
                     {thirdPart.map((el, idx) => (
-                        <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
+                        <motion.div style={{ y: isMobile ? 0 : translateThird }} key={"grid-3" + idx}>
                             <div className={cn("w-full rounded-lg gap-10 !m-0 !p-0 bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center border border-white/10 relative overflow-hidden group", heights[(idx + 2) % heights.length])}>
                                 <Image
                                     src={el}
@@ -100,7 +112,7 @@ export const ParallaxScroll = ({
                 {/* Column 4 */}
                 <div className="grid gap-12">
                     {fourthPart.map((el, idx) => (
-                        <motion.div style={{ y: translateFourth }} key={"grid-4" + idx}>
+                        <motion.div style={{ y: isMobile ? 0 : translateFourth }} key={"grid-4" + idx}>
                             <div className={cn("w-full rounded-lg gap-10 !m-0 !p-0 bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center border border-white/10 relative overflow-hidden group", heights[(idx + 3) % heights.length])}>
                                 <Image
                                     src={el}
