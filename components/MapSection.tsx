@@ -42,11 +42,19 @@ const mapElements: MapElement[] = [
     // Complex (Multi-sport tooltip)
     {
         id: "mittal",
-        name: ["Mittal Sports Complex", "Badminton", "Table Tennis", "Squash", "Chess", "Weightlifting"],
+        name: ["Mittal Sports Complex", "Badminton", "Table Tennis", "Squash", "Chess"],
         image: "/maps/icons/mittal.png",
         x: 50,
         y: 50.7,
         width: 4
+    },
+    {
+        id: "sac",
+        name: ["Student Activity Center", "Weightlifting"],
+        image: "/maps/icons/sac.png",
+        x: 33,
+        y: 48,
+        width: 4.5
     },
 ];
 
@@ -99,7 +107,7 @@ export default function MapSection() {
                     >
                         {/* Base Map */}
                         <Image
-                            src="/maps/iitdmap2.png"
+                            src="/maps/iitdmap.png"
                             alt="IIT Delhi Map"
                             fill
                             className="object-contain" // Changed to contain to show full map
@@ -151,26 +159,24 @@ export default function MapSection() {
                                                         initial={{ opacity: 0, y: element.groupId === "gates" ? 2 : 5, scale: 0.8 }}
                                                         animate={{ opacity: 1, y: 0, scale: 1 }}
                                                         exit={{ opacity: 0, y: element.groupId === "gates" ? 0 : 2, scale: 0.9 }}
-                                                        className={`absolute left-1/2 -translate-x-1/2 bottom-full ${element.groupId === "gates" ? "-mb-3" : "mb-2"} bg-blue-950/90 border border-blue-400/30 backdrop-blur-md px-3 py-2 rounded-lg pointer-events-none min-w-max z-50 shadow-xl`}
+                                                        className={`absolute left-1/2 -translate-x-1/2 bottom-full ${element.groupId === "gates" ? "-mb-2 md:-mb-3" : "mb-1 md:mb-2"} bg-blue-950/90 border border-blue-400/30 backdrop-blur-md px-1.5 py-0.5 md:px-3 md:py-2 rounded-lg pointer-events-none min-w-max z-50 shadow-xl flex items-center justify-center`}
                                                     >
                                                         {Array.isArray(element.name) ? (
-                                                            <div className="flex flex-col items-center gap-1">
-                                                                <span className="text-blue-200 font-bold text-xs uppercase tracking-wider border-b border-white/10 pb-1 mb-1 w-full text-center">
+                                                            <div className="flex flex-col items-center gap-0.5 md:gap-1">
+                                                                <span className="text-blue-200 font-bold text-[9px] md:text-xs uppercase tracking-wider border-b border-white/10 pb-0.5 md:pb-1 mb-0.5 md:mb-1 w-full text-center">
                                                                     {element.name[0]}
                                                                 </span>
                                                                 {element.name.slice(1).map((subItem, idx) => (
-                                                                    <span key={idx} className="text-white/90 text-[10px] leading-tight">
+                                                                    <span key={idx} className="text-white/90 text-[7px] md:text-[10px] leading-tight">
                                                                         {subItem}
                                                                     </span>
                                                                 ))}
                                                             </div>
                                                         ) : (
-                                                            <span className="text-white font-bold text-xs md:text-sm whitespace-nowrap tracking-wide">
+                                                            <span className="text-white font-bold text-[9px] md:text-xs lg:text-sm whitespace-nowrap tracking-wide leading-none">
                                                                 {element.name}
                                                             </span>
                                                         )}
-                                                        {/* Arrow */}
-                                                        <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-blue-950/90" />
                                                     </motion.div>
                                                 )}
                                             </AnimatePresence>

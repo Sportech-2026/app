@@ -35,7 +35,7 @@ export default function Hero2() {
           initial={{ scale: 0.8, opacity: 0, y: 50 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="relative w-[400px] h-[300px] md:w-[800px] md:h-[300px] z-30 pointer-events-auto "
+          className="relative w-[90%] max-w-[400px] h-[300px] md:w-[800px] md:max-w-none md:h-[300px] z-30 pointer-events-auto "
         >
           <Image
             src="/heroes/sportech_hero.png"
