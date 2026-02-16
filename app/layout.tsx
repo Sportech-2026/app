@@ -34,6 +34,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sportech-iitd.com'),
   title: "Sportech",
   description: "Official Website of Sportech, IIT Delhi",
   icons: {
@@ -56,8 +57,8 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-         <Analytics />
-          <SpeedInsights />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
